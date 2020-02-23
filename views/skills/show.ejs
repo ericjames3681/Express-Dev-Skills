@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Skill Levels</title>
+</head>
+<body>
+    <h1><%= skill.title %></h1>
+    <p>Skill Level <%= skill.level %></p>
+    <form action="/skills/<%= skillId %>" method="POST">
+        <button type="submit">DELETE</button>
+    </form>
+    <a href="/skills">Back to All Skills</a>
+    <a href="/">Back to Home Page</a>
+    
+</body>
+</html>
