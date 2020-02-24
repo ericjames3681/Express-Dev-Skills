@@ -13,14 +13,11 @@ function newSkill(req, res) {
 }
 
 function create(req, res) {
-  const skill = req.body;
-  skill.level = 1;
-  Skill.create(skill);
+  Skill.create(req.body);
   res.redirect('/skills');
 }
 function deleteSkill(req, res) {
-    const skillId = req.params.id;
-    Skill.deleteOne(skillId);
+    Skill.deleteOne(req.params.id);
     res.redirect('/skills');
 }
 function index(req, res) {

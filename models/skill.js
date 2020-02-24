@@ -1,7 +1,8 @@
 module.exports = {
     getAll,
     getOne,
-    deleteOne
+    deleteOne,
+    create
 };
 const skills = [
     {title: 'JavaScript', level: 5},
@@ -9,6 +10,10 @@ const skills = [
     {title: 'React', level: 5},
     {title: 'MongoDB', level: 4}
 ];
+
+function create(skill) {
+    skills.push(skill);
+}
 
 function deleteOne(id) {
     skills.splice(id, 1);
