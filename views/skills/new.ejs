@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Create New Skill</title>
 </head>
 <body>
     <h1>Create New Skill</h1>
     <form action="/skills" method="POST" autocomplete="off">
         <fieldset> 
-            <legend>Skill Details</legend>
+            <legend>Skill Entry</legend>
             <label for="skill">Skill: </label>
             <input type="text" name="title" id="skill">
+            <label for="level">Level: </label>
+            <input type="number" name="level" id="skill">           
             <button type="submit">SUBMIT</button>
         </fieldset>
     </form>

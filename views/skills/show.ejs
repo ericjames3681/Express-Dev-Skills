@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>See Skill Levels</title>
 </head>
 <body>
-    <h1><%= skill.title %></h1>
-    <p>Skill Level <%= skill.level %></p>
-    <form action="/skills/<%= skillId %>" method="POST">
-        <button type="submit"?_method->DELETE</button>
-    </form>
+    <h1>Details</h1>
+    <fieldset>
+        <legend>Skill: <%= skill.title %></legend>
+        <p>Skill Level: <%= skill.level %></p>
+    </fieldset>
     <a href="/skills">Back to All Skills</a>
     <a href="/">Back to Home Page</a>
     

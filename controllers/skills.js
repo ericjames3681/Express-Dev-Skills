@@ -17,7 +17,8 @@ function create(req, res) {
   res.redirect('/skills');
 }
 function deleteSkill(req, res) {
-    Skill.deleteOne(req.params.id);
+    const skillId = req.params.id;
+    Skill.deleteOne(skillId);
     res.redirect('/skills');
 }
 function index(req, res) {

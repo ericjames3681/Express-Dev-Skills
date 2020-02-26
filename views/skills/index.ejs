@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Skills</title>
-    <link rel="public/stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
     <h1>Welcome to Dev Skills</h1>
-    <a href ="/skills">Go Back Home</a>
+    <a href ="/">Go Back Home</a>
     <ul>
-        <% skills.forEach(function(skill, idx) { %>
+        <% skills.forEach(function(s, idx) { %>
             <li>
-                <a href="/skills/<%=idx%>"> <%= skill.title%></a>
+                <form action="/skills/<%= idx %>?_method=DELETE" method="POST">
+                    <button type="submit">DELETE</button>
+                <a href="/skills/<%=idx%>"> <%= s.title%> </a>
+                </form>
             </li>
-            <% }); %>
+        <% }); %>
         </ul>
     <a href="/skills/new">Add Skill</a>
 </body>
 </html>
+            
